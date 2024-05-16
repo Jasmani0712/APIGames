@@ -11,9 +11,7 @@ class GamesRepository @Inject constructor(private val apiGames: ApiGames) {
         val response = apiGames.getGames()
         if (response.isSuccessful){
             return response.body()?.results
-
         }
-
         return null
     }
 
